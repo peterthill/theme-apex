@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">
 	<head> 
-	<!-- 2014-11-14-22-04 -->
+	<!-- 2014-11-15-21-50 -->
 		<meta charset="utf-8">
 		<title>
 			{% if is_login %}Login
@@ -40,7 +40,7 @@
 					<a class="logo" href="/">
 						<img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" />
 					</a>
-					<div class="site-description">
+					<div class="site-description"> <!-- Begin Seiten - Statisch und flexibel -->
 						<hr color="white"> <!-- Begin statische Seiten -->
 						<ul>
 							<li><a href="/">Home</a></li>
@@ -61,8 +61,8 @@
 			</div>
 			<div class="row wrapper">
 				<div class="span4 spacer"></div>
-					{% if is_home or is_tag %}
-			   	   <div class="span6 offset1 posts">
+				{% if is_home or is_tag %}
+					<div class="span6 offset1 posts">
 						{% if is_tag %}
 							<h4 class="sub-heading span6">Alle Posts mit {{ tag }}:</h4>
 						{% endif %}
@@ -70,9 +70,7 @@
 						{% for post in posts %}
 							<div class="post span6">
 								<div class="row">
-              					<div class="span6">
-										<h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
-									</div>
+									<div class="span6"><h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2></div>
 								</div>
 								<div class="post-body" data-type-cleanup="true">{{ post.content }}</div>
 								<div class="post-info">
@@ -88,19 +86,17 @@
 							</div>
 						{% endif %}
 						{% else %}
-						<h4 class="sub-heading span6">Noch keine Einträge vorhanden :-(</h4>
+							<h4 class="sub-heading span6">Noch keine Einträge vorhanden :-(</h4>
 						{% endif %}
 					</div>
-					{% elif post %}
-						<div class="span6 offset1 posts">
+				{% elif post %}
+					<div class="span6 offset1 posts">
 						<div class="post whole span6">
 							<h1>{{ post.title }}</h1>
 							<div class="post-info">
 								<div class="info-left"><p class="date">{{ post.created_at|format_date }}</p></div>
 								<div class="info-right">
-									<p class="comments">
-										<a href="/"><i class="icon-comment"></i> 0</a>
-									</p>
+									<p class="comments"><a href="/"><i class="icon-comment"></i> 0</a></p>
 								</div>
 							</div>
 							<div class="post-body">
@@ -134,19 +130,20 @@
 							{% endif %}
 						</div>
 					</div>
-					{% elif post.type == 'page' %}
-						<div class="span6 offset1 posts">
-							<div class="post whole span6">
-								<h1>{{ page.title }}</h1>
-								<div class="post-body" data-type-cleanup="true">{{ page.content }}</div>
-								<div class="post-footer"><p class="back"><a href="/">&laquo; Zur&uuml;ck</a></p></div>
-							</div>
+				{% elif post.type == 'page' %}
+					<div class="span6 offset1 posts">
+						<div class="post whole span6">
+							<h1>{{ page.title }}</h1>
+							<div class="post-body" data-type-cleanup="true">{{ page.content }}</div>
+							<div class="post-footer"><p class="back"><a href="/">&laquo; Zur&uuml;ck</a></p></div>
 						</div>
+					</div>
 				{% endif %}
 			</div>
 		{% endif %}
 			{{ footer_meta }}
 				<!-- bootstrap -->
 				<script src="http://postach.io/static/themes/_assets/bootstrap/js/bootstrap.min.js" /></script>
+				<a href="http://bluefish.openoffice.nl/">Made with Bluefish HTML editor.</a>
 	</body>
 </html>
