@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">
 	<head> 
-	<!-- 2014-11-18-16-55 -->
+	<!-- 2014-11-20-15-05 -->
 		<meta charset="utf-8">
 		<title>
 			{% if is_login %}Login
@@ -31,7 +31,7 @@
 			</script>
 		{% endif %}
 	</head>
-	<body style="background-image:url(http://www.peterthill.de/Wallpapers/wallpaper.jpg); background-repeat:repeat; background-attachment:fixed;">
+	<body {% if is_post or is_tag or is_page %} class="short-header"{% endif %} style="background-image:url(http://www.peterthill.de/Wallpapers/wallpaper.jpg); background-repeat:repeat; background-attachment:fixed;">
 		{% if is_login %}
 			{{ login_form }}
 			{% else  %}
