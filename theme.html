@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">
 	<head> 
-	<!-- 2014-11-20-15-05 -->
+	<!-- 2014-11-20-20-42 -->
 		<meta charset="utf-8">
 		<title>
 			{% if is_login %}Login
@@ -46,7 +46,8 @@
 						<img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" />
 					</a>
 					<div class="site-description"> <!-- Begin Seiten - Statisch und flexibel -->
-						<!-- <hr color="white"> --> <!-- Begin statische Seiten -->
+						<hr color="white">
+						<!-- Begin statische Seiten -->
 						<ul>
 							<li><a href="/">Home</a></li>
 							<li><a href="http://thill.postach.io">Betreuung</a></li>
@@ -58,7 +59,8 @@
 							<li>&nbsp;</li>
 							<li>&nbsp;</li> -->
 						</ul>
-						<hr color="white"> <!-- Beginn flexible Seiten -->
+						<hr color="white">
+						<!-- Beginn flexible Seiten -->
 						<ul>
 							{% if pages %}
 								{% for page in pages %}
@@ -66,6 +68,7 @@
 								{% endfor %}
 							{% endif %}
 						</ul>
+						<hr color="white">
 					</div>
 				</div>
 			</div>
