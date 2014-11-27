@@ -12,11 +12,6 @@
 		</title>
 		{{ header_meta }}
 		<link rel="stylesheet" type="text/css" href="{{ assets('css/style.css') }}">
-		<!-- <style>
-			a:link { color: black; }
-			a:visited { color: black; }
-			a:hover { color: red; }
-		</style> -->
 		{% if site.analytics %}
 			<script>
 				var _gaq = _gaq || [];
@@ -50,13 +45,13 @@
 							<li><a href="/">Home</a></li>
 							<li><a href="http://forum.postach.io/">Zum Forum (Passwort benötigt)</a></li>
 						</ul>
-						<!-- <hr color="white"> -->
 						<ul>
 							<li><a href="http://peterthill.github.io">Peters GitHub Page</a></li>
 							<li><a href="http://nichtdigitalerblog.postach.io">Peters Analoger Blog</a></li>
 						</ul>
-						<!-- <hr color="white"> -->
-						<!-- Beginn flexible Seiten -->
+						<ul>
+							<li><a href="/in-memoriam-an" class="active">In Memoriam</a></li>
+						</ul>
 						<ul>
 							{% if pages %}
 								{% for page in pages %}
